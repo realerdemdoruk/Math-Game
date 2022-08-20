@@ -41,7 +41,7 @@ function getPassword() {
 
 function deneme()
 {
-    console.log(input)
+
 }
 
 getPassword();
