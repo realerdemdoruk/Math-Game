@@ -1,40 +1,47 @@
 function getPassword() {
 
-    // We set a random password
-    // const numbers = "0123456789";
-    // let passwordLength = 16;
-    // let password = ' ';
-
-
-
-
     const numbers = [0,1,2,3,4,5,6,7,8,9]
+    const symbols = ["+", "-", "*", "/"]
 
 
-
-
-    // numbers.forEach(number => {
-
-        // });
-        
-        
-        var number1 = numbers[Math.floor(Math.random()*numbers.length)];
-        var number2 = numbers[Math.floor(Math.random()*numbers.length)];
+    let number1 = numbers[Math.floor(Math.random()*numbers.length)];
+    let number2 = numbers[Math.floor(Math.random()*numbers.length)];
+    let symbol = symbols[Math.floor(Math.random()*symbols.length)];
         
             // console.log(number)
 
 
 
-    // for (let i = 0; i < 1; i++) {
-    //     let randomNumber = Math.floor(Math.random() * numbers.length);
-    //     password += numbers.substring(randomNumber, randomNumber + 1)
-    // }
+            document.querySelector("button").addEventListener("click" ,function(){
+
+                input = document.getElementById("input")
+
+                console.log(input.value , "sadas")
+                // input = Number(input)
+
+
+                // console.log(typeof(input))
+
+                if(input.value == (number1 + number2))
+                {
+                    console.log("Doğru bildiniz")
+                }
+                else{
+                    console.log("Yanlış")
+                }
+            })
+
+
 
     document.getElementById("number1").innerHTML = number1
-
-    // document.getElementById("number1").innerHTML = password
+    document.getElementById("symbols").innerHTML = symbol
     document.getElementById("number2").innerHTML = number2
 }
 
+
+function deneme()
+{
+    console.log(input)
+}
 
 getPassword();
