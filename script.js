@@ -1,47 +1,114 @@
-function getPassword() {
+
+
+
+
+//  const setQuery = (e) => {
+//     if(e.keyCode == "13")
+//     getResult(input.value)
+// }
+
+
+
+function getRandom() {
 
     const numbers = [0,1,2,3,4,5,6,7,8,9]
     const symbols = ["+", "-", "*", "/"]
 
 
     let number1 = numbers[Math.floor(Math.random()*numbers.length)];
-    let number2 = numbers[Math.floor(Math.random()*numbers.length)];
+
     let symbol = symbols[Math.floor(Math.random()*symbols.length)];
         
-            // console.log(number)
+    let number2 = numbers[Math.floor(Math.random()*numbers.length)];
+
+
+   
+
+    document.body.onkeydown = function(e){
+        if(e.keyCode == 32){
+// document.querySelector("button").addEventListener("click" ,function(){
+
+
+    input = document.getElementById("input")
+
+    console.log(input.value , "sadas")
 
 
 
-            document.querySelector("button").addEventListener("click" ,function(){
 
-                input = document.getElementById("input")
+    score = 0;
 
-                console.log(input.value , "sadas")
-                // input = Number(input)
+    console.log(numbers)
 
+    if(input.value == (number1 + number2) && symbol == "+")
+    {
+        console.log("Doğru bildiniz")
 
-                // console.log(typeof(input))
+        localStorage.setItem("Score",score + 1)
+    }
+    else if(input.value == (number1 - number2) && symbol == "-")
+    {
+        console.log("Doğru bildiniz")
+        localStorage.setItem("Score",score + 1)
+    }
+    else if(input.value == (number1 * number2) && symbol == "*")
+    {
+        console.log("Doğru bildiniz")
+        localStorage.setItem("Score",score + 1)
+    }
+    else if(input.value == (number1 / number2) && symbol == "/")
+    {
+        console.log("Doğru bildiniz")
+        localStorage.setItem("Score",score + 1)
+    }
+    else
+    {
+        console.log("Yanlış")
+    }
 
-                if(input.value == (number1 + number2))
-                {
-                    console.log("Doğru bildiniz")
-                }
-                else{
-                    console.log("Yanlış")
-                }
-            })
+    input.value = ""
 
+    
 
+    console.log(localStorage.getItem("Score"))
+// })
 
-    document.getElementById("number1").innerHTML = number1
-    document.getElementById("symbols").innerHTML = symbol
-    document.getElementById("number2").innerHTML = number2
+document.getElementById("number1").innerHTML = deneme()
+document.getElementById("symbols").innerHTML = deneme2()
+document.getElementById("number2").innerHTML = deneme()
+
 }
+
+
+
+
+
+
+
+
+        //your code
+    }
+}
+getRandom();
+
+
+// document.getElementById("input").addEventListener("keypress",setQuery)
 
 
 function deneme()
 {
-
+    return Math.floor(Math.random() * 10);
 }
 
-getPassword();
+
+function deneme2()
+{
+    const symbols = ["+", "-", "*", "/"]
+    return symbols[Math.floor(Math.random()*symbols.length)];
+    console.log(symbols[Math.floor(Math.random()*symbols.length)])
+}
+
+
+
+// document.getElementById("input").addEventListener("keypress",setQuery()) 
+   // console.log("31")
