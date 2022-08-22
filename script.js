@@ -7,9 +7,9 @@ let symbol = symbols[Math.floor(Math.random() * symbols.length)];
 let number2 = numbers[Math.floor(Math.random() * numbers.length)];
 
 
-document.getElementById("number1").innerHTML = number1
-document.getElementById("symbols").innerHTML = symbol
-document.getElementById("number2").innerHTML = number2
+// document.getElementById("number1").innerHTML = number1
+// document.getElementById("symbols").innerHTML = symbol
+// document.getElementById("number2").innerHTML = number2
 
 
 
@@ -74,21 +74,12 @@ document.getElementById("number2").innerHTML = number2
 
 
 
-function bakalim() {
-    document.getElementById("number1").innerHTML = number1
-    document.getElementById("symbols").innerHTML = symbol
-    document.getElementById("number2").innerHTML = number2
-}
-
-
-
 
 document.querySelector("button").addEventListener("click",function(){
 
 
-
-    let randomY = Math.floor(Math.random() * 500);
-    let randomX = Math.floor(Math.random() * 1100);
+    let randomX = Math.floor(Math.random() * 10);
+    let randomY = Math.floor(Math.random() * 10);
 
     document.getElementById("number1").innerHTML = randomX
     document.getElementById("symbols").innerHTML = symbol
@@ -96,39 +87,31 @@ document.querySelector("button").addEventListener("click",function(){
 
     // console.log("3131")
 
+console.log(randomX, symbol)
 
-    if (input.value == (number1 + number2) && symbol == "+") {
-        console.log("Doğru bildiniz")
-        bakalim()
+// console.log(input.value)
+    if (input.value == (randomX + randomY) && symbol == "+") {
+        console.log("Doğru bildiniz 1")
+        
+        // bakalim()
         // wasd()
         localStorage.setItem("Score", score + 1)
 
-        // document.getElementById("number1").innerHTML = wasd()
-        // document.getElementById("symbols").innerHTML = wasd()
-        // document.getElementById("number2").innerHTML = wasd()
 
 
 
-        // document.querySelector("").addEventListener("click",function(){
-
-        // })
-        document.getElementById("number1").innerHTML = number1
-        document.getElementById("symbols").innerHTML = symbol
-        document.getElementById("number2").innerHTML = number2
-
-
-    } else if (input.value == (number1 - number2) && symbol == "-") {
-        console.log("Doğru bildiniz")
+    } else if (input.value == (randomX - randomY) && symbol == "-") {
+        console.log("Doğru bildiniz 2")
         localStorage.setItem("Score", score + 1)
         // bakalim()
         // wasd()
-    } else if (input.value == (number1 * number2) && symbol == "*") {
-        console.log("Doğru bildiniz")
+    } else if (input.value == (randomX * randomY) && symbol == "*") {
+        console.log("Doğru bildiniz 3")
         localStorage.setItem("Score", score + 1)
         // bakalim()
         // wasd()
-    } else if (input.value == (number1 / number2) && symbol == "/") {
-        console.log("Doğru bildiniz")
+    } else if (input.value == (randomX / randomY) && symbol == "/") {
+        console.log("Doğru bildiniz 4")
         localStorage.setItem("Score", score + 1)
         // bakalim()
         // wasd()
