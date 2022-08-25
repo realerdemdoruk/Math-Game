@@ -28,6 +28,7 @@ document.querySelector("button").addEventListener("click",function(){
 
 deneme(getRandomNumber(),getRandomNumber(),getRandomSign());
 
+console.log(typeof(getRandomNumber()))
 
 })
 
