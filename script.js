@@ -1,57 +1,110 @@
-input = document.getElementById("input");
+let n1 = Math.floor(Math.random()*20+1);
+      let n2 = Math.floor(Math.random()*20+1);
 
-getRandomSign = () => {
-    const signs = ['+', '-', '*', '/'];
-    const idx = Math.floor(Math.random() * signs.length);
-    return signs[idx];
-};
+      document.getElementById("intext").value = n1;
+      document.getElementById("intext1").value = n2;
+      let topScore = document.getElementById("topScore");
 
-getRandomNumber = () => {
-    const numbers =[0,1,2,3,4,5,6,7,8,9]
-    const idx = Math.floor(Math.random() * numbers.length);
-    return numbers[idx]
-};
+      let adds= n1 + n2;
 
-number1 = document.getElementById("number1");
-number2 = document.getElementById("number2");
-symbols = document.getElementById("symbols");
+      console.log(adds)
 
-document.querySelector("button").addEventListener("click",function(){
+      function Game(){
+         var user = document.getElementById("intext2").value;
 
 
-    number1.innerHTML = getRandomNumber()
-    symbols.innerHTML = getRandomSign()
-    number2.innerHTML = getRandomNumber()
+         countdown(30);
+
+         if( user == adds){
+            document.getElementById("ans").innerHTML = "Well Done! Your Answer is Correct";
+
+            var scorePrint = document.getElementById("score");
 
 
-
-
-deneme(getRandomNumber(),getRandomNumber(),getRandomSign());
-
-console.log(typeof(getRandomNumber()))
-
-})
+            
+        //     let scoreValue = score.value = Number(score.value) + 1;
+        // scorePrint.innerHTML = `Score: ${scoreValue}`;
 
 
 
 
-function deneme(num1, num2, sym){
-    
-    if (input.value == (num1 + num2) && sym == "+") {
-        console.log("Doğru bildiniz 1")
+        // if (scoreValue > localStorage.getItem("highscore")) {
+
+        //     localStorage.setItem("highscore", scoreValue)
+        //     scorePrint.innerHTML = `Top Score: ${scoreValue}`
+        // }
+
+
+
+        let scoreValue = score.value = Number(score.value) + 1
+        scorePrint.innerHTML = `Score: ${scoreValue}`
+
+
+        if (scoreValue > localStorage.getItem("highscore")) {
+
+            localStorage.setItem("highscore", scoreValue)
+            topScore.innerHTML = `Top Score: ${scoreValue}`
+        }
+
         
-    } else if (input.value == (num1 - num2) && sym == "-") {
-        console.log("Doğru bildiniz 2")
+            
 
-    } else if (input.value == (num1 * num2) && sym == "*") {
-        console.log("Doğru bildiniz 3")
+            
 
-    } else if (input.value == (num1 / num2) && sym == "/") {
-        console.log("Doğru bildiniz 4")
-        
-    } else {
-        console.log("Yanlış")
-    }
-    
-    input.value = ""
-}
+
+         }else{
+             document.getElementById("ans").innerHTML = "Correct Answer " + adds + " . Try Again";
+             countdown(3);
+         }
+
+           var user= document.getElementById("intext2").value = "";
+
+
+      n1 = Math.floor(Math.random()*20+1);
+      n2 = Math.floor(Math.random()*20+1);
+
+      document.getElementById("intext").value = n1;	
+      document.getElementById("intext1").value = n2;
+
+      adds = n1 + n2;
+
+
+      }
+
+
+
+
+
+
+
+    // Countdown
+      function countdown(e){
+
+          let timeleft = e;
+          let downloadTimer = setInterval(function () {
+              if (timeleft <= 0) {
+                  clearInterval(downloadTimer);
+                  document.getElementById("countdown").innerHTML = "Finished";
+                  
+                  if (document.getElementById("countdown").innerHTML == "Finished") {
+                      //   random.style.display = "none";
+                      
+                      // Reloads the page
+                      setInterval(function () {
+                          window.location.reload(false);
+                        }, 2000);
+                    }
+                } 
+                else {
+                    document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+                }
+                timeleft -= 1;
+            }, 1000);
+            
+
+        }
+
+
+
+      
+        topScore.innerHTML = `Top Score: ${localStorage.getItem("highscore")}`

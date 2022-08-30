@@ -1,37 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <!-- 01000101 -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Math Addintion Game</title>
+
+   <!-- Css Link -->
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+   <input type="button" name="" id="score" value="0">
+   <div id="topScore">Top Score:</div>
 
-    <div class="container">
+   <div id="countdown"></div>
+   <!-- Main Container -->
+   <div class="main-container">
+      <div class="main">
+         
+         <!-- Heading -->
+         <h1>Math Addition <span> Quiz Game :)</span></h1>
 
-        <div id="score">wasd</div>
+         <!-- Main Box -->
+         <div class="main-box">
+            <div class="show-anwser"><span id="ans"></span></div>
 
+            <div class="box1">
+               <div class="box-col">
+                  <input type="textf" id="intext" class="intext11">
+               </div>
 
-        <div class="row">
-            <div id="number1"></div>
-            <div id="symbols"></div>
-            <div id="number2"></div>
-        </div>
+               <div class="add-s">
+                  <p>+</p>
+               </div>
 
-    <!-- <div class="row"> -->
-        <input type="text" id="input">
-    <!-- </div> -->
+                <div class="box-col">
+                  <input type="textf" id="intext1" class="intext11">
+               </div>
 
+            </div>
 
-    <button type="button">3131</button>
+            <!-- text input -->
+            <div class="box2">
+               <input tpye="text" id="intext2">
+            </div>
 
+            <!-- button -->
+             <div class="box2">
+               <button class="btn" onclick="Game()"> Check Anwser</button>
+            </div>
+         </div>
+      </div>
+   </div>
 
-    </div>
+   <script src="script.js"></script>
 
-    <script src="script.js"></script>
 </body>
 </html>
