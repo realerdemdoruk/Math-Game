@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
    <!-- 01000101 -->
    <meta charset="utf-8">
@@ -9,23 +10,28 @@
    <!-- Css Link -->
    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
    <!-- Main Container -->
-   <div id="topScore">Top Score:</div>
-   <input type="button" name="" id="score" value="0">
+
    <div class="main-container">
+
+      <div class="scores">
+         <input type="button" name="" id="score" value="0"> 
+         <div id="print"></div>
+         <div id="topScore">Top Score:</div>
+
+      </div>
+
+
       <div class="main">
          
+
          <!-- Heading -->
          <h1>Math Addition <span> Quiz Game :)</span></h1>
 
-         <div class="wasd">
 
-          
-           
-          
-         </div>
 
          <!-- Main Box -->
          <div class="main-box">
@@ -40,7 +46,7 @@
                   <p>+</p>
                </div>
 
-                <div class="box-col">
+               <div class="box-col">
                   <input type="textf" id="intext1" class="intext11">
                </div>
 
@@ -52,7 +58,7 @@
             </div>
 
             <!-- button -->
-             <div class="box2">
+            <div class="box2">
                <button class="btn" onclick="Game()"> Check Anwser</button>
                <div id="countdown"></div>
             </div>
