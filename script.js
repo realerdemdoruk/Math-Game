@@ -63,4 +63,4 @@ function process() {
     return adds = n1 + n2;
 }
 
-topScore.innerHTML = `Top Score: ${localStorage.getItem("highscore")}`
+topScore.innerHTML = `Top Score:${localStorage.getItem("highscore")}`
