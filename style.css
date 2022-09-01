@@ -13,9 +13,6 @@
    justify-content: center;
    align-items: center;
    flex-direction: column;
-
-
-
 }
 
 .main-box {
@@ -26,7 +23,6 @@
    flex-direction: column;
    align-items: center;
    border-radius: 10px
-
 }
 
 .show-anwser {
@@ -45,7 +41,6 @@
 }
 
 .scores {
-   
    width: 100%;
    display: flex;
    justify-content: space-between;
@@ -75,16 +70,7 @@
    text-align: center;
    border: none;
    background: #fff;
-
-
-
-
-
-   /* box-shadow: 1px 1px 0px #999,
-    2px 2px 0px #999,
-    3px 2px 0px #999,
-    4px 4px 0px #999,
-    5px 5px 0px #999; */
+   border-radius: 10px;
 }
 
 .add-s {
@@ -101,8 +87,6 @@
    font-size: 20px;
    font-weight: 600;
    border: none;
-   border-bottom-left-radius: 10px;
-   border-bottom-right-radius: 10px;
 }
 
 .btn {
@@ -111,16 +95,7 @@
    font-size: 16px;
    color: #fff;
    background: lightpink;
-   /* box-shadow: 1px 1px 0px #999,
-    2px 2px 0px #999,
-    3px 2px 0px #999,
-    4px 4px 0px #999,
-    5px 5px 0px #999; */
-   /* border-bottom-left-radius: 10px; */
-
    border-radius: 10px;
-   /* border-bottom-right-radius: 10px; */
-
 }
 
 .main h1 {
@@ -128,5 +103,5 @@
 }
 
 .main h1 span {
-   color: #fb6868;
+   color: lightpink;
 }
